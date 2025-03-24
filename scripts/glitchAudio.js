@@ -1,3 +1,7 @@
+import { activateEscapeKey } from "./stopTheMadness.js";
+activateEscapeKey();
+// ------------------------------------------------------------
+
 // Glitchy Audio Loop 🔊
 export function glitchyAudio() {
   const sound = new Audio("../assets/unbelievable_jingle.mp3");

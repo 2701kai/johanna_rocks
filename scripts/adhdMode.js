@@ -1,3 +1,9 @@
+// ------------------------------------------------------------
+// added:
+import { activateEscapeKey } from "./stopTheMadness.js";
+activateEscapeKey();
+// ------------------------------------------------------------
+
 export function goAbsolutelyBonkers() {
   createMatrixCanvas();
   scrambleFonts();
@@ -76,7 +82,8 @@ function scrambleFonts() {
     });
   };
 
-  setInterval(scramble, 1000);
+  // setInterval(scramble, 1000);
+  window._scrambleInterval = setInterval(scramble, 1000);
 }
 
 // 3. Unlock Icon on Secret Typing

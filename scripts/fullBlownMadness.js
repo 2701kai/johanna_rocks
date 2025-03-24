@@ -1,3 +1,7 @@
+import { activateEscapeKey } from "./stopTheMadness.js";
+activateEscapeKey();
+// ------------------------------------------------------------
+
 // confettiExplosion.js
 
 export function runWildConfetti() {

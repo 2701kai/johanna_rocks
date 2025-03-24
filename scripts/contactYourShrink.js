@@ -1,3 +1,7 @@
+import { activateEscapeKey } from "./stopTheMadness.js";
+activateEscapeKey();
+// ------------------------------------------------------------
+
 export function goMultiverseMadness() {
   cloneMinions();
   shakeCamera();
