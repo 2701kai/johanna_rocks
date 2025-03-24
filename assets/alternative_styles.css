@@ -1,0 +1,19 @@
+/* alternative button style by id, maybe.. */
+#confetti-reset-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 20px;
+  font-size: 1.6rem;
+  background-color: #ff4a11;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#confetti-reset-btn:hover {
+  background-color: #ff2600;
+}

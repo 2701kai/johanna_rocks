@@ -99,7 +99,228 @@ main {
   background-position: top;
 }
 
-.aenne {
+/* .aenne {
   margin-top: 100px;
   text-align: center;
+} */
+
+h1 {
+  font-size: 7em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn {
+  /* display: flex;
+        flex-direction: column; */
+  border: none;
+  color: white;
+  padding: 14px 16px;
+  margin: 20px 0;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.14em;
+  display: inline-block;
+  font-size: 1.6em;
+  padding-inline: 50px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+  background-color: #ff4a11;
+  /* Zeilenumbruch im Button anzeigen:*/
+  white-space: pre-line;
+}
+
+.btn:hover {
+  font-size: 2em;
+  font-weight: bold;
+  background-color: #e5430f;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    class= "btn" 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ------------------------------------------------------------- */
+/*  MORE COWBELL!! */
+/* ------------------------------------------------------------- */
+
+/* -------------------------------------- */
+/* a website without MINIONS is a crime.. */
+/* -------------------------------------- */
+.minions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Default styles */
+.minions img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .minions img {
+    width: 90vw;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+/* ------------------------------------------------------------- */
+/* added for contactYourShrink.js aka "you broke the simulation" */
+/* ------------------------------------------------------------- */
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.shake-it {
+  animation: shake 0.4s;
+  animation-iteration-count: infinite;
+}
+
+/* ------------------------------------------------------------- */
+/* added for shrink zone */
+/* CHAOS STACK 3000™ */
+/* Powered by banana fuel 🍌 and bad decisions 🤪
+/* ------------------------------------------------------------- */
+
+@keyframes flash {
+  from {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.portal-effect {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150vmax;
+  height: 150vmax;
+  background: radial-gradient(circle, #00ffff33 0%, #00000000 70%);
+  border-radius: 50%;
+  animation: pulsePortal 3s ease-out forwards;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@keyframes pulsePortal {
+  0% {
+    opacity: 0;
+    transform: scale(0.1) translate(-50%, -50%);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3) translate(-50%, -50%);
+  }
+}
+
+/* ------------------------------------------------------------- */
+/* added ESC hint to stop the madness */
+/* ------------------------------------------------------------- */
+
+.hint {
+  position: absolute;
+  top: 45%;
+  left: 22.5%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  z-index: 10; /* Ensure it's above other elements */
+  background-color: rgba(
+    32,
+    204,
+    9,
+    0.35
+  ); /* Optional: for better visibility */
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 1;
+  transition: opacity 5s ease-in-out;
+}
+
+.hint.fade-out {
+  opacity: 0;
+}
+
+.hint small {
+  font-size: 2.5rem;
+  letter-spacing: 0.16rem;
+}
+
+b {
+  letter-spacing: 0.28rem;
+  color: #ff4a11;
 }

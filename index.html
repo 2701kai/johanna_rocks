@@ -9,9 +9,9 @@
      <link rel="stylesheet" href="https://rsms.me/inter/inter.css"> -->
     <!-- <link rel="preconnect" href="https://your-domain/" /> -->
 
-    <link rel="stylesheet" href="../assets/fonts/inter.css" />
+    <link rel="stylesheet" href="./assets/fonts/inter.css" />
     <!--  end inter font ------------------------------------------ -->
-    <link rel="icon" href="../assets/favicon.ico" sizes="192x192" />
+    <link rel="icon" href="./assets/favicon.ico" sizes="192x192" />
     <link rel="stylesheet" href="./style.css" />
     <title>Hallo Johanna!</title>
   </head>
@@ -19,15 +19,26 @@
     <h1>Moin, Johanna!</h1>
     <div class="aenne">
       <h2>Schön, dass Du hier bist!</h2>
+      <div class="flex">
+        <button class="btn" id="confetti-reset-button">Nicht drücken</button>
+      </div>
       <br />
       <div class="minions">
         <img src="./assets/tenor_1.webp" alt="" class="src" />
+      </div>
+
+      <!-- added ESC hint to stop the madness at any time -->
+      <div class="hint fade-out">
+        <small>Press <b>ESC</b> at any time</small>
+        <br />
+        <small>to stop the madness.</small>
       </div>
 
       <!-- <img src="./assets/apple-touch-icon.png" alt="" /> -->
     </div>
     <!-- Confeeeetti, Jo is here!! -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <script src="./script.js"></script>
+    <script type="module" src="./scripts/script.js"></script>
+    <script type="module" src="./scripts/moreCowbell.js"></script>
   </body>
 </html>
