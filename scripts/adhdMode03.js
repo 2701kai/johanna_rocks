@@ -1,14 +1,21 @@
 export function goAbsolutelyBonkers() {
   createMatrixCanvas();
   scrambleFonts();
-  setupChaosUnlockListener();
-  glitchyAudio();
-  escapeShortcut();
 
-  // Auto-escalate to shrink zone after 10s
+  // ⏱ escalate after 10 seconds
   setTimeout(() => {
     triggerShrink();
   }, 10000);
+
+  // 👀 secret keyboard mash: typing "chaos"
+  let sequence = "";
+  document.addEventListener("keydown", (e) => {
+    sequence += e.key.toLowerCase();
+    if (sequence.includes("chaos")) {
+      triggerShrink();
+      sequence = ""; // reset the madness buffer
+    }
+  });
 }
 
 // 1. Matrix Background 🌌
@@ -22,7 +29,7 @@ function createMatrixCanvas() {
   canvas.style.height = "100vh";
   canvas.style.zIndex = "9998";
   canvas.style.pointerEvents = "none";
-  canvas.style.backgroundColor = "transparent";
+  canvas.style.backgroundColor = "transparent"; // allow seeing chaos behind
   canvas.style.mixBlendMode = "screen";
   document.body.appendChild(canvas);
 
@@ -79,60 +86,8 @@ function scrambleFonts() {
   setInterval(scramble, 1000);
 }
 
-// 3. Unlock Icon on Secret Typing
-function setupChaosUnlockListener() {
-  let typed = "";
-  let flashing = false;
-
-  document.addEventListener("keydown", (e) => {
-    typed += e.key.toLowerCase();
-
-    if (!flashing) {
-      showUnlockIcon();
-      flashing = true;
-    }
-
-    if (typed.includes("chaos")) {
-      triggerShrink();
-      removeUnlockIcon();
-      typed = "";
-    }
-  });
-
-  function showUnlockIcon() {
-    const icon = document.createElement("div");
-    icon.id = "chaos-unlock";
-    icon.textContent = "🔓";
-    icon.style.position = "fixed";
-    icon.style.top = "20px";
-    icon.style.right = "20px";
-    icon.style.fontSize = "3rem";
-    icon.style.animation = "flash 0.5s infinite alternate";
-    icon.style.zIndex = "9999";
-    document.body.appendChild(icon);
-  }
-
-  function removeUnlockIcon() {
-    const icon = document.getElementById("chaos-unlock");
-    if (icon) icon.remove();
-  }
-}
-
-// 4. Ctrl + C = Teleport Home
-function escapeShortcut() {
-  document.addEventListener("keydown", (e) => {
-    if (e.ctrlKey && e.key.toLowerCase() === "c") {
-      window.location.href = "/"; // or whatever your home path is
-    }
-  });
-}
-
-// 5. SHRINK ZONE™
+// 3. 🚨 Time to call the shrink
 async function triggerShrink() {
-  const portal = document.createElement("div");
-  portal.classList.add("portal-effect");
-  document.body.appendChild(portal);
-
   const shrink = await import("./contactYourShrink.js");
   shrink.goMultiverseMadness();
 }

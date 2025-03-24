@@ -56,6 +56,9 @@ async function handleClick() {
     playLoop();
 
     triggerADHD();
+  } else if (clickCount === 4) {
+    const shrink = await import("./contactYourShrink.js");
+    shrink.goMultiverseMadness();
   }
 }
 

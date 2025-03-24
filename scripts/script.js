@@ -34,3 +34,14 @@ if (!localStorage.getItem("visited")) {
 
   //   localStorage.setItem("visited", "true");
 }
+
+// -----------------------------------------------------
+// coming up: DOM manipulation, hide hint w. JS
+// -----------------------------------------------------
+// const hint = document.querySelector(".hint");
+// setTimeout(() => {
+//   hint.classList.add("fade-out");
+// }, 3000);
+// setTimeout(() => {
+//   hint.remove();
+// }, 6000);
