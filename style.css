@@ -320,7 +320,18 @@ h2 {
   letter-spacing: 0.16rem;
 }
 
-b {
+b,
+kbd {
   letter-spacing: 0.28rem;
   color: #ff4a11;
+}
+
+kbd {
+  background: #111;
+  color: #0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "Hack", monospace;
+  font-size: 0.9em;
+  border: 1px solid #444;
 }
