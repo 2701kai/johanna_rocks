@@ -10,7 +10,7 @@ Totally got sidetracked (with joy!) by the news of a Girl’s Day visit - so I d
 
 **Intention**: Flex some tasteful CSS magic.
 
-**Reality**: Spiraled into a rabbit hole of questionable creative choices and entirely-too-much fun.
+**Reality**: Spiraled into a rabbit hole of questionable creative choices and entirely-too-much fun. Apart from literally [branching out](bash_customization/bashrc.md).
 
 What else is new? 😎✨
 
