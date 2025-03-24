@@ -21,6 +21,7 @@ async function handleClick() {
   clickCount++;
 
   const sound = new Audio("../assets/unbelievable_jingle.mp3");
+  const sound2 = new Audio("../assets/plexico-1-shorter.mp3");
 
   if (clickCount === 1) {
     // First click: one sound + mild confetti
@@ -74,7 +75,7 @@ async function handleClick() {
     const playLoop = () => {
       if (playCount < 3) {
         sound.currentTime = 0;
-        sound.play();
+        sound2.play();
         playCount++;
         sound.onended = playLoop;
       }
