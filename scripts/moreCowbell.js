@@ -27,6 +27,32 @@ async function handleClick() {
     sound.play();
     const module = await import("./confettiExplosion.js");
     module.runWildConfetti();
+
+    // added image of minions after first button-click ------------
+    const srcImage = document.createElement("img");
+    srcImage.src = "./assets/tenor_1.webp";
+    srcImage.alt = "";
+    srcImage.classList.add("src");
+    document.querySelector(".minions").appendChild(srcImage);
+
+    // also moved hint after first button-click from html----------
+    const hint = document.createElement("div");
+    hint.classList.add("hint");
+    hint.innerHTML = `<small> Press <kbd>ESC</kbd> or <kbd>Ctrl</kbd> + <kbd>C</kbd> </small>
+      <br />
+      <small> to stop the madness <br />at any time. </small>`;
+    document.querySelector(".minions").appendChild(hint);
+
+    // then moved opacity from css to js after first button-click---
+    hint.style.opacity = "1";
+    hint.style.transition = "opacity 5s ease-in-out";
+
+    setTimeout(() => {
+      hint.classList.add("fade-out");
+      hint.style.opacity = "0";
+    }, 7000);
+
+    // ------------------------------------------------------------
   } else if (clickCount === 2) {
     // Second click: play sound twice
     let playCount = 0;
