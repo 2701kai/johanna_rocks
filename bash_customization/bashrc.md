@@ -51,3 +51,26 @@ bind -x '"\ev":gacp'
 # ---------------------------
 alias gp='git push'
 ```
+
+_cheeses, quite addictive.._
+
+````bash
+# ---------------------------
+# GCMM: Merge current branch into `main`
+# ---------------------------
+gcmm() {
+  current_branch=$(git symbolic-ref --short HEAD)
+
+  if [ "$current_branch" = "main" ]; then
+    echo "You're already on 'main'. Cannot merge 'main' into itself."
+    return 1
+  fi
+
+  echo "Merging '$current_branch' into 'main'..."
+  git checkout main && git merge "$current_branch"
+}
+
+# Alt + M to trigger
+bind -x '"\em":gcmm'
+```S
+````
