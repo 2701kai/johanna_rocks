@@ -7,12 +7,29 @@
 :root {
   font-size: 10px;
   color: #dcdcdc;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+
+  /* chgd. to Inter: -------------------------------------- */
+  font-family: "InterDisplay", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+  /* ------------------------------------------------------ */
 }
 
 html {
   scroll-behavior: smooth;
   background-color: #0f0f0f;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-family: "InterDisplay", sans-serif;
+  font-weight: 700;
+  color: #ff4a11;
+  margin: 20px 0;
 }
 
 /* -----------------------------------------------------
@@ -65,6 +82,7 @@ h1 {
   text-align: center;
   font-size: 7em;
   opacity: 0.6;
+  margin-top: 1em;
 }
 
 /* -----------------------------------------------------
