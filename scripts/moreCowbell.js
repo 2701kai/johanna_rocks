@@ -51,7 +51,7 @@ async function handleClick() {
     setTimeout(() => {
       hint.classList.add("fade-out");
       hint.style.opacity = "0";
-    }, 7000);
+    }, 6000);
 
     // ------------------------------------------------------------
   } else if (clickCount === 2) {
@@ -75,6 +75,8 @@ async function handleClick() {
     const playLoop = () => {
       if (playCount < 3) {
         sound.currentTime = 0;
+        // sound.play();
+        // chgd.to plexico 1x
         sound2.play();
         playCount++;
         sound.onended = playLoop;

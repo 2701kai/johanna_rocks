@@ -37,7 +37,7 @@ function emojiExplosion() {
     span.style.fontSize = `${Math.random() * 3 + 2}rem`;
     span.style.left = `${Math.random() * 100}vw`;
     span.style.top = `${Math.random() * 100}vh`;
-    span.style.transition = "all 3s ease-out";
+    span.style.transition = "all 5s ease-out";
     span.style.zIndex = "9999";
     document.body.appendChild(span);
 
@@ -48,7 +48,7 @@ function emojiExplosion() {
       span.style.opacity = "0";
     });
 
-    setTimeout(() => span.remove(), 3000);
+    setTimeout(() => span.remove(), 6000);
   }
 }
 
